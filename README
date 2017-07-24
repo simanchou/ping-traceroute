@@ -1,0 +1,9 @@
+1.Require fping & mtr for collect data,you should install fping & mtr first.
+
+2.Requirements for python read requirements.txt for more detail.
+
+3.You must modify "py_env" in runserver.sh by using your python env before start.
+
+4.Using "sh runserver.sh start" to start,default port for web is 5000.
+
+5.Open http://yourip:5000,username:admin,password:admin.

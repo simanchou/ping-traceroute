@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% if not session.logged_in %}
+    <meta http-equiv="refresh" content="0.1;url={{ url_for('login') }}">
+    {% endif %}
+    <title>Ping & Traceroute</title>
+	<!-- BOOTSTRAP STYLES-->
+    <link href="static/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="static/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="static/css/custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+
+                <form name="changeform" action="{{ url_for('edit_user') }}" method="post">
+                <table>
+                    <tr>
+                        <td width="120" align="right">User name:</td>
+                        <td align="left"><input name="input_u" type="text" value="{{ user_name }}"></td>
+                    </tr>
+                    <tr>
+                        <td width="120" align="right">Old Passwd:</td>
+                        <td align="left"><input name="input_op" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td width="120" align="right">New Passwd:</td>
+                        <td align="left"><input name="input_np" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td width="160" align="right">Confirm New Passwd:</td>
+                        <td align="left"><input name="input_npa" type="password"></td>
+                    </tr>
+                </table>
+                    <input name="change" type="submit" value="change">
+                </form>
+
+
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="static/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="static/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="static/js/jquery.metisMenu.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="static/js/custom.js"></script>
+
+   
+</body>
+</html>
